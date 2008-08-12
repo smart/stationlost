@@ -1,0 +1,12 @@
+<h1>Editing playlist_clip</h1>
+
+<% form_for(@playlist_clip) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @playlist_clip %> |
+<%= link_to 'Back', playlist_clips_path %>

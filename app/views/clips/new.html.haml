@@ -1,0 +1,9 @@
+%h1 Creating Clip
+
+= error_messages_for :clip
+
+- form_for(:clip, :url => objects_url, :html => { :multipart => true }) do |f|
+  = render :partial => "form", :locals => {:f => f}
+  %p= submit_tag "Create"
+
+= link_to 'Back', objects_path

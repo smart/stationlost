@@ -1,0 +1,18 @@
+<h1>Listing playlist_clips</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for playlist_clip in @playlist_clips %>
+  <tr>
+    <td><%= link_to 'Show', playlist_clip %></td>
+    <td><%= link_to 'Edit', edit_playlist_clip_path(playlist_clip) %></td>
+    <td><%= link_to 'Destroy', playlist_clip, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New playlist_clip', new_playlist_clip_path %>

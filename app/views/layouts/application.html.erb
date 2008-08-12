@@ -3,10 +3,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Title Branding</title>
+  <meta name="keywords" content="Lost, Video, Dynamic, Timeline, Constand" />
+  <meta name="description" content="Top Secret" />
+  <title>Station Lost - How you want it</title>
   <%= stylesheet_link_tag 'reset' %>
   <%= stylesheet_link_tag 'base' %>
   <%= stylesheet_link_tag 'fonts' %>
+  <%= stylesheet_link_tag 'pages' %>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag :defaults %>
   <!--[if lte IE 7]>
@@ -20,9 +23,11 @@
   <div id="container" class="<%= page_class %>">
     
     <div id="header">
-      <h1 id="branding"><strong>Branding</strong></h1>
+      <a href="/">
+        <h1 id="branding"><strong>Station Lost</strong></h1>
+      </a>
       <%= yield :header %>
-      <%= session_links %>
+      
     </div>
     
     <div id="wrapper">
@@ -36,20 +41,44 @@
     </div>
     
     <div id="secondary">
-    
+      
     <% default_content_for :sidebar do %>
-      <%= render :partial => 'shared/sidebar' %>
+      <%#= render :partial => 'shared/sidebar' %>
     <% end %>
     
-    <%= page_class %>
+    <%#= session_links %>
     </div>
     
     <div id="tertiary">
-      
     </div>
     
+    <div id="navigation">
+      <ul>
+	    <li>Hello</li>
+	  </ul>
+    </div>
+    <br clear="all" />
+    <div id="lower" style="width:100%;">
+    	<%= yield :lower %>
+    </div>
     <div id="footer">
-      <p>Footer Text</p>
+      <% content 'roundbox', :box_class => "white" do %>
+        <div id="contact">
+          <!--
+          <h3>Get in Touch</h3>
+          <ul>
+            <li>40 Main Street, Suite 3</li>
+            <li>Brooklyn, NY 11201</li>
+            <li>p. 646-233-3508</li>
+            <li>f. 718-795-1942</li>
+            <li>info@sympact.net</li>
+          </ul>
+          <%# image_tag 'contact_icon.png' %>
+          -->
+          <p>Creted by the PsyEO of Mop Top Media</p>
+        </div>
+      <% end %>
+      <span class="clear"></span>
     </div>
     
   </div>

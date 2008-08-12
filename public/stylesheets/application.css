@@ -1,61 +1,124 @@
 body {
   text-align: center;
-  background: #efe9da url(/images/revision01/header_background.png) repeat-x top left; }
+  background: black url(/images/body_background.jpg) repeat-x top left; }
   body div#container {
     text-align: left;
     width: 960px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
   body div#wrapper {
     float: left;
     width: 100%; }
   body div#primary {
-    margin: 10px 0 0 300px; }
-    body div#primary > div {
-      margin-left: 15px; }
+    margin: 20px 367px 0 0; 
+    padding-right: 10px; }
     body div#primary .user {
       border: 1px solid #534b56;
       margin-bottom: 10px;
       padding: 10px;
       background-color: #d3dde5; }
   body div#secondary {
-    float: left;
-    width: 300px;
-    margin-left: -960px;
-    padding-top: 10px; }
+    float: right;
+    /* width: 367px; */
+    margin-left: -367px;
+    padding-top: 20px;
+    text-align: center; }
   body div#tertiary {
-    float: left;
-    width: 300px;
-    margin-left: -550px; }
+    position: absolute;
+    top: 0;
+    right: 15px; }
+  body div#tertiary .twitter {
+	position:absolute;
+	top: 70px;
+	right:0px;
+}
   body div#footer {
     clear: left;
     width: 100%;
     text-align: center;
-    padding: 1em 0; }
+    padding: 2em 0 1em 0; }
+
+.static.index div#primary {
+  margin-right: 50%;
+  width: 50%; }
+  .static.index div#primary h1 {
+    /*text-decoration: underline; */}
+.static.index div#secondary {
+  margin-left: -45%;
+  text-align: right; }
+.static.index div#secondary .quote {
+	font-size: 20px;
+	font-weight: bold;
+}
+.static.index div#secondary .quote_author {
+	font-size: 14px;
+}
+
+
+.static.about_us div#primary {
+  margin-right: 50%; }
+.static.about_us div#secondary {
+  margin-left: -50%;
+  width: 50%;
+  text-align: left;
+  padding-top: 0; }
+
+.pages.show div#primary {
+  width: auto;
+  margin-right: 0; }
+.pages.show div#secondary {
+  margin-left: 0;
+  float: none; }
+
+.page .slide .asset {
+  float: left;
+  text-align: center; }
+
+div#navigation {
+  position: absolute;
+  top: 89px;
+  left: 0;
+  width: 960px;
+  font-family: 'Trebuchet MS', Arial, Georgia, Serif;
+  font-size: 18px; }
+  div#navigation a {
+    color: #fff;
+    text-decoration: none; }
+    div#navigation a:hover {
+      border-bottom: 3px solid #600; }
+  div#navigation ul {
+    float: right;
+    margin: 0 auto;
+    line-height: 29px; }
+    div#navigation ul li {
+      float: left;
+      padding: 0 20px 0 20px;
+      list-style-type: none; }
 
 div#header {
   position: relative;
-  height: 75px; }
+  height: 118px; }
   div#header h1#branding {
     line-height: 40px;
-    margin: 0 0 0 10px;
-    width: 160px;
-    height: 75px;
+    margin: 20px 0 0;
+    width: 161px;
+    height: 63px;
     display: block;
-    float: right;
-    position: relative; }
+    float: left;
+    position: relative;
+    /* background: url() no-repeat top left; } */
     div#header h1#branding strong {
       position: absolute;
-      left: -10000px; }
+     /* left: -10000px; } */
   div#header #session {
     width: 288px;
     height: 58px;
     margin: 9px 0 0 0;
-    float: left;
+    float: right;
     padding: 0; }
     div#header #session .user_info {
       padding: 6px 6px 7px; }
       div#header #session .user_info strong {
-        color: #fff;
         font-size: 123.1%; }
       div#header #session .user_info .avatar {
         float: left;
@@ -85,20 +148,103 @@ a {
       list-style-type: none; }
 
 h1 {
-  font-size: 138.5%;
+  font-size: 197%;
   font-weight: bold;
+  font-family: 'Trebuchet MS';
   margin: 0 0 0.25em 0;
-  padding: 0.1em 0; }
+  padding: 0.1em 0;
+  color: #990000; }
 
-form ul li {
+h2, legend {
+  color: #bf0000;
+  font-size: 174%;
+  font-weight: bold;
+  font-family: 'Trebuchet MS'; }
+
+fieldset {
+  border: 1px solid grey;
+  padding: 15px;
+  margin-top: 15px; }
+
+form ul li, form fieldset {
   list-style-type: none; }
-  form ul li input, form ul li textarea, form ul li select {
+  form ul li input, form ul li textarea, form ul li select,   form fieldset input, form fieldset textarea, form fieldset select {
     display: block;
     margin-bottom: .75em;
     border: 1px solid black; }
-  form ul li input, form ul li textarea {
+  form ul li input, form ul li textarea,   form fieldset input, form fieldset textarea {
     padding: .1em .25em; }
 form label {
   display: block;
   margin-bottom: .25em;
   font-weight: bold; }
+
+span.clear {
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.box {
+  position: relative;
+  margin: 0 auto;
+  min-width: 8em;
+  z-index: 1;
+  margin: 0 0 15px 15px; }
+  .box.grey .content, .box.grey .t, .box.grey .b, .box.grey .b div {
+    background: transparent url('/images/greybox.png') no-repeat top right; }
+  .box.white .content, .box.white .t, .box.white .b, .box.white .b div {
+    background: transparent url('/images/whitebox.png') no-repeat top right; }
+  .box .content {
+    position: relative;
+    zoom: 1;
+    _overflow-y: hidden;
+    padding: 15px 15px 0 0; }
+    .box .content p:last-child {
+      margin-bottom: 0 !important; }
+  .box .t {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    margin-left: -15px;
+    height: 100%;
+    _height: 1600px;
+    background-position: top left !important; }
+  .box .b {
+    position: relative;
+    width: 100%;
+    background-position: bottom right !important; }
+  .box .b, .box .b div {
+    height: 15px;
+    font-size: 1px; }
+  .box .b div {
+    position: relative;
+    width: 15px;
+    margin-left: -15px;
+    background-position: bottom left !important; }
+
+.demo .snippet {
+	float: right;
+	
+}
+
+.demo .main {
+	margin:  5px;
+	padding: 5px;
+	
+}
+
+
+.demos #primary {
+	width: 100%;
+}
+
+.demos #secondary { 
+  	display: none;
+	width:   0px;
+}
+
+.jobs ul li {
+	list-style-type: none;
+}

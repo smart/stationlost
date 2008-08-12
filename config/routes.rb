@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :seasons
+
+  map.resources :episodes
+
+  map.resources :playlist_clips
+
+  map.resources :playlists
+
+  map.resources :clips
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

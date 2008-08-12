@@ -1,0 +1,22 @@
+%div[season]
+
+  %p.name
+    %strong 
+    = h season.name
+
+  %p.number
+    %strong Number
+    = h season.number
+
+  %p.permalink
+    %strong Permalink
+    = h season.permalink
+
+
+  = link_to 'Show', object_path(season)
+
+  - if authorized?
+    |
+    = link_to 'Edit', edit_object_path(season)
+    |
+    = link_to 'Destroy', object_path(season), :confirm => 'Really destroy season?', :method => :delete

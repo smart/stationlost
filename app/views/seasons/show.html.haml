@@ -1,0 +1,20 @@
+%div[current_object]
+
+  %h1.name
+    = h current_object.name
+
+  %p.number
+    = h current_object.number
+  
+  = render :partial => current_object.episodes, :locals => { :parent => current_object}
+  
+  - if authorized?
+  
+    %div.admin
+      = link_to 'New Episode', new_season_episode_path(current_object)
+      |
+      = link_to 'Edit', edit_object_path
+      |
+      = link_to 'Destroy', object_path, :confirm => 'Really destroy season?', :method => :delete
+      |
+      = link_to 'Back', objects_path
