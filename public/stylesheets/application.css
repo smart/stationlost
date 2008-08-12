@@ -1,0 +1,104 @@
+body {
+  text-align: center;
+  background: #efe9da url(/images/revision01/header_background.png) repeat-x top left; }
+  body div#container {
+    text-align: left;
+    width: 960px;
+    margin: 0 auto; }
+  body div#wrapper {
+    float: left;
+    width: 100%; }
+  body div#primary {
+    margin: 10px 0 0 300px; }
+    body div#primary > div {
+      margin-left: 15px; }
+    body div#primary .user {
+      border: 1px solid #534b56;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #d3dde5; }
+  body div#secondary {
+    float: left;
+    width: 300px;
+    margin-left: -960px;
+    padding-top: 10px; }
+  body div#tertiary {
+    float: left;
+    width: 300px;
+    margin-left: -550px; }
+  body div#footer {
+    clear: left;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0; }
+
+div#header {
+  position: relative;
+  height: 75px; }
+  div#header h1#branding {
+    line-height: 40px;
+    margin: 0 0 0 10px;
+    width: 160px;
+    height: 75px;
+    display: block;
+    float: right;
+    position: relative; }
+    div#header h1#branding strong {
+      position: absolute;
+      left: -10000px; }
+  div#header #session {
+    width: 288px;
+    height: 58px;
+    margin: 9px 0 0 0;
+    float: left;
+    padding: 0; }
+    div#header #session .user_info {
+      padding: 6px 6px 7px; }
+      div#header #session .user_info strong {
+        color: #fff;
+        font-size: 123.1%; }
+      div#header #session .user_info .avatar {
+        float: left;
+        margin-right: 6px; }
+      div#header #session .user_info ul.nav {
+        float: left;
+        margin: 0;
+        padding: 0; }
+        div#header #session .user_info ul.nav li {
+          float: left;
+          display: inline;
+          padding-right: 6px; }
+
+a {
+  text-decoration: none; }
+
+.flash {
+  background-color: #d3dde5;
+  border: 1px solid #534b56;
+  margin: 10px;
+  padding: 10px; }
+  .flash h2, .flash h3 {
+    margin: 0; }
+  .flash ul {
+    margin: 5px 0 5px 20px; }
+    .flash ul li {
+      list-style-type: none; }
+
+h1 {
+  font-size: 138.5%;
+  font-weight: bold;
+  margin: 0 0 0.25em 0;
+  padding: 0.1em 0; }
+
+form ul li {
+  list-style-type: none; }
+  form ul li input, form ul li textarea, form ul li select {
+    display: block;
+    margin-bottom: .75em;
+    border: 1px solid black; }
+  form ul li input, form ul li textarea {
+    padding: .1em .25em; }
+form label {
+  display: block;
+  margin-bottom: .25em;
+  font-weight: bold; }
