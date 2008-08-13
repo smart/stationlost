@@ -1,0 +1,183 @@
+body {
+  text-align: center;
+  background: black url(/images/body_background.jpg) repeat-x;
+  background-position: -89px -89px; }
+  body div#container {
+    text-align: left;
+    width: 960px;
+    margin: 0 auto;
+    position: relative; }
+  body div#wrapper {
+    float: left;
+    width: 100%; }
+  body div#primary {
+    margin: 20px 367px 0 0; }
+    body div#primary .user {
+      border: 1px solid #534b56;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #d3dde5; }
+  body div#secondary {
+    float: left;
+    width: 367px;
+    margin-left: -367px;
+    padding-top: 20px;
+    text-align: center; }
+  body div#tertiary {
+    position: absolute;
+    top: 0;
+    right: 15px; }
+  body div#footer {
+    clear: left;
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 1em 0; }
+
+div#navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  font-family: 'Trebuchet MS', Arial, Georgia, Serif;
+  font-size: 138.5%; }
+  div#navigation a {
+    color: #fff;
+    text-decoration: none; }
+    div#navigation a:hover {
+      border-bottom: 3px solid #600; }
+  div#navigation ul {
+    float: right;
+    margin: 0 auto;
+    line-height: 29px; }
+    div#navigation ul li {
+      float: left;
+      padding: 0 20px 0 20px;
+      list-style-type: none; }
+
+div#header {
+  position: relative;
+  line-height: 29px;
+  text-transform: lowercase; }
+  div#header h1#branding {
+    color: #fff;
+    font-size: 138.5%;
+    margin: 0;
+    padding: 0; }
+    div#header h1#branding a {
+      color: #fff;
+      text-decoration: none; }
+      div#header h1#branding a:hover {
+        border-bottom: 3px solid #600; }
+  div#header #session {
+    width: 288px;
+    height: 58px;
+    margin: 9px 0 0 0;
+    float: right;
+    padding: 0; }
+    div#header #session .user_info {
+      padding: 6px 6px 7px; }
+      div#header #session .user_info strong {
+        font-size: 123.1%; }
+      div#header #session .user_info .avatar {
+        float: left;
+        margin-right: 6px; }
+      div#header #session .user_info ul.nav {
+        float: left;
+        margin: 0;
+        padding: 0; }
+        div#header #session .user_info ul.nav li {
+          float: left;
+          display: inline;
+          padding-right: 6px; }
+
+a {
+  text-decoration: none; }
+
+.flash {
+  background-color: #d3dde5;
+  border: 1px solid #534b56;
+  margin: 10px;
+  padding: 10px; }
+  .flash h2, .flash h3 {
+    margin: 0; }
+  .flash ul {
+    margin: 5px 0 5px 20px; }
+    .flash ul li {
+      list-style-type: none; }
+
+h1 {
+  font-size: 197%;
+  font-weight: bold;
+  font-family: 'Trebuchet MS';
+  margin: 0 0 0.25em 0;
+  padding: 0.1em 0;
+  color: #990000; }
+
+h2, legend {
+  color: #bf0000;
+  font-size: 174%;
+  font-weight: bold;
+  font-family: 'Trebuchet MS'; }
+
+fieldset {
+  border: 1px solid grey;
+  padding: 15px;
+  margin-top: 15px; }
+
+form ul li, form fieldset {
+  list-style-type: none; }
+  form ul li input, form ul li textarea, form ul li select,   form fieldset input, form fieldset textarea, form fieldset select {
+    display: block;
+    margin-bottom: .75em;
+    border: 1px solid black; }
+  form ul li input, form ul li textarea,   form fieldset input, form fieldset textarea {
+    padding: .1em .25em; }
+form label {
+  display: block;
+  margin-bottom: .25em;
+  font-weight: bold; }
+
+span.clear {
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.box {
+  position: relative;
+  margin: 0 auto;
+  min-width: 8em;
+  z-index: 1;
+  margin: 0 0 15px 15px; }
+  .box.grey .content, .box.grey .t, .box.grey .b, .box.grey .b div {
+    background: transparent url('/images/greybox.png') no-repeat top right; }
+  .box.white .content, .box.white .t, .box.white .b, .box.white .b div {
+    background: transparent url('/images/whitebox.png') no-repeat top right; }
+  .box .content {
+    position: relative;
+    zoom: 1;
+    _overflow-y: hidden;
+    padding: 15px 15px 0 0; }
+    .box .content p:last-child {
+      margin-bottom: 0 !important; }
+  .box .t {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    margin-left: -15px;
+    height: 100%;
+    _height: 1600px;
+    background-position: top left !important; }
+  .box .b {
+    position: relative;
+    width: 100%;
+    background-position: bottom right !important; }
+  .box .b, .box .b div {
+    height: 15px;
+    font-size: 1px; }
+  .box .b div {
+    position: relative;
+    width: 15px;
+    margin-left: -15px;
+    background-position: bottom left !important; }

@@ -1,0 +1,13 @@
+%div[episode]
+
+  %p.name
+    %strong 
+      Episode 
+      = h episode.number
+      - 
+      = link_to episode.name, episode_path(episode)
+      - if authorized?
+        |
+        = link_to 'Edit', edit_episode_path(episode)
+        |
+        = link_to 'Destroy', episode_path(episode), :confirm => 'Really destroy episode?', :method => :delete

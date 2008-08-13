@@ -1,0 +1,16 @@
+%div[current_object]
+
+
+  %p.name
+    %strong 
+      Episode 
+      = h current_object.number
+      - 
+      = render :partial => current_object.clips, :locals => { :parent => current_object}
+  - if authorized?
+    = link_to 'New Clip', new_episode_clip_path(current_object)
+    |
+    = link_to 'Edit Episode', edit_object_path(current_object)
+    |
+    = link_to 'Destroy Episode', object_path(current_object), :confirm => 'Really destroy episode?', :method => :delete
+

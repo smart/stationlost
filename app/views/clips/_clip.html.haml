@@ -1,0 +1,19 @@
+%div[clip]
+
+  %p.position
+    %strong Position
+    = h clip.position
+
+  %p.filename
+    %strong Filename
+    = h clip.filename
+
+
+
+  = link_to 'Show', object_path(clip)
+
+  - if authorized?
+    |
+    = link_to 'Edit', edit_object_path(clip)
+    |
+    = link_to 'Destroy', object_path(clip), :confirm => 'Really destroy clip?', :method => :delete

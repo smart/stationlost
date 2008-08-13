@@ -1,0 +1,37 @@
+%div[current_object]
+
+  %h1.title
+    Watch clip
+
+  %p.filename
+    =h current_object.filename
+ 
+  %a.player
+    :erb
+      <embed width="100%" height="100%" flashvars='config={"initialScale":"scale","videoFile":"<%= current_object.public_filename %>"}' pluginspage="http://www.adobe.com/go/getflashplayer" type="application/x-shockwave-flash" quality="high" allowscriptaccess="always" allowfullscreen="true" bgcolor="#009dff" src="../FlowPlayerDark.swf"/>
+  
+  
+  %div.playlist
+    %a{'href' => 'http://blip.tv/file/get/N8inpasadena-Flowers457.flv'}
+      %p This is a test
+      %p.time 
+        2:04 min
+
+  - if authorized?
+  
+    %div.admin
+      = link_to 'Edit', edit_object_path
+      |
+      = link_to 'Destroy', object_path, :confirm => 'Really destroy clip?', :method => :delete
+      |
+      = link_to 'Back', objects_path
+
+:erb
+  <% content_for :head do %>
+    <script type="text/javascript"> 
+      // setup playlist 
+      $(function() {
+        $("#playlist").playlist("FlowPlayerDark.swf", {initialScale:'scale'}, {loop:true});
+      }); 	
+    </script>
+  <% end %>
