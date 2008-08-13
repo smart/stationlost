@@ -3,4 +3,8 @@ module ApplicationHelper
   def content(partial, opts = {}, &block)
     Content.new(partial, self, opts, &block).render
   end
+  
+  def authorized?
+    true
+  end
 end

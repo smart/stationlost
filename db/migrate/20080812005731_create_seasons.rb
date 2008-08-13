@@ -2,7 +2,7 @@ class CreateSeasons < ActiveRecord::Migration
   def self.up
     create_table :seasons do |t|
       t.integer :number
-      t.integer :name
+      t.string :name, :limit => 255
       t.string :permalink, :limit => 100
       t.timestamps
     end

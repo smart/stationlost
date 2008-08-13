@@ -6,6 +6,6 @@ class Season < ActiveRecord::Base
   validates_uniqueness_of :name, :permalink
   
   def to_param
-    "#{permalink}"
+    "#{id}-#{permalink}"
   end
 end

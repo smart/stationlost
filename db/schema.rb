@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20080812024216) do
 
   create_table "seasons", :force => true do |t|
     t.integer  "number"
-    t.integer  "name"
+    t.string   "name"
     t.string   "permalink",  :limit => 100
     t.datetime "created_at"
     t.datetime "updated_at"
