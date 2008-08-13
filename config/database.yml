@@ -36,7 +36,7 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: sympact_production
+  database: stationlost_production
   username: root
   password: 
-  host: localhost
+  host: db_primary
