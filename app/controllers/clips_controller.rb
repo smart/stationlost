@@ -2,6 +2,10 @@ class ClipsController < SiteController
   
   make_resourceful do
     actions :all
+    before :index do 
+      @current_objects = Clip.tagged_with(params[:clip_search][:tags], :on => :tags) if params[:clip_search] && params[:clip_search][:tags] && !params[:clip_search][:tags].empty?
+    end  
+      
   end
   
 
@@ -14,4 +18,6 @@ class ClipsController < SiteController
   def context
     action_name == 'index' ? 'application' : super
   end
+  
+  #  @current_objects ||= 
 end

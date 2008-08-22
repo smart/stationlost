@@ -1,0 +1,7 @@
+%p
+  = playlist.name
+  = link_to "view", playlist_url(playlist)
+  |
+  = link_to "edit", edit_playlist_url(playlist)
+  |
+  = link_to "destroy", playlist_url(playlist), :method => :delete, :confirm => "Are you sure?" 

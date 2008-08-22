@@ -1,0 +1,63 @@
+%div['watch']
+
+  %h1.title
+    Watch Playlist
+
+  %p.filename
+    =h current_object.name
+ 
+  %a{:id => "player"}
+    = image_tag "http://www.flowplayer.org/tools/img/3m.jpg"
+    %div.play
+
+= content_for :sidebar do   
+  <!-- root element of the playlist -->
+  %div.playlist
+    <!-- playlist items -->
+    %div.items
+      = render :partial => "playlists/clip", :collection => current_object.clips
+    %div.navi
+
+   
+
+- if authorized?
+  
+  %div.admin
+    = link_to 'Edit', edit_object_path
+    |
+    = link_to 'Destroy', object_path, :confirm => 'Really destroy clip?', :method => :delete
+    |
+    = link_to 'Back', objects_path
+
+:erb 
+  <% content_for :javascript do %>
+    <%= javascript_include_tag 'jquery.pack' %>
+    <%# javascript_include_tag 'jquery.mousewheel' %>
+    <%# javascript_include_tag 'jquery.scrollable.min' %>
+    <%= javascript_include_tag 'flashembed.min' %>
+  <% end %>
+
+:erb
+  <% content_for :head do %>
+    <%= javascript_include_tag "flow.playlist" %>
+    <script type="text/javascript">
+    // setup scrollable playlist when page is scriptable  
+    $(document).ready(function() {             
+      // setup Flowplayer playlist from <div.items/> 
+      $("div.items").playlist( 
+      
+        // flash parameters 
+        "../FlowPlayerDark.swf", 
+
+        // flowplayer configuration 
+        {initialScale:'scale'},  
+
+        // playlist configuration 
+        {loop:true} 
+      ); 
+
+      // make playlist scrollable    
+      $("div.playlist").scrollable({size:3});     
+    }); 
+    </script>
+  <% end %>

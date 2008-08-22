@@ -26,6 +26,11 @@
       |
       = link_to 'Back', objects_path
 
+:erb  
+  <% content_for :sidebar do %> 
+    <%= render :partial => "clip_right" %>
+  <% end %>
+
 :erb
   <% content_for :head do %>
     <script type="text/javascript"> 

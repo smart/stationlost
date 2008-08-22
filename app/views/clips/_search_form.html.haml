@@ -1,0 +1,10 @@
+%p 
+  %label{:for => "tags"} Tags:
+  = f.text_field :tags
+
+%ul[:id => "prevtags"]
+  = render :partial => Tag.find(:all)
+
+%p
+  %label{:for => "save_name"} Save Search(enter name):
+  = f.text_field :save_name

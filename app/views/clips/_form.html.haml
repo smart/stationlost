@@ -8,3 +8,10 @@
   %label{:for => "clip_uploaded_data"} Upload Clip:
   = f.file_field :uploaded_data
 
+%p
+  %label{:for => "ticket_tag_list"} Tags:
+  = f.text_field :tag_list
+
+%ul[:id => "prevtags"]
+  = render :partial => Tag.find(:all)
+ 

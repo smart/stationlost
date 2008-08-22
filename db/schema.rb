@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080812024216) do
+ActiveRecord::Schema.define(:version => 20080816145738) do
 
   create_table "clips", :force => true do |t|
     t.integer  "episode_id"
@@ -69,5 +69,17 @@ ActiveRecord::Schema.define(:version => 20080812024216) do
   create_table "tags", :force => true do |t|
     t.string "name"
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "identifier",                :limit => 40
+    t.string   "name",                      :limit => 100, :default => ""
+    t.string   "email",                     :limit => 100
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "remember_token",            :limit => 40
+    t.datetime "remember_token_expires_at"
+  end
+
+  add_index "users", ["name"], :name => "index_users_on_name", :unique => true
 
 end

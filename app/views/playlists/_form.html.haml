@@ -1,3 +1,10 @@
 %p 
   %label{:for => "name"} Name:
   = f.text_field :name
+
+%p
+  %label{:for => "ticket_tags"} Tags:
+  = f.text_field :tag_list
+
+%ul[:id => "prevtags"]
+  = render :partial => Tag.find(:all)

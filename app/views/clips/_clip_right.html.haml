@@ -1,0 +1,12 @@
+
+%ul
+  %li#tag_notice
+    hello
+  %li
+    - remote_form_for(:clip, :url => object_url, :html => { :method => :put }) do |f| 
+      %label{:for => "clip_tags"} Tags:
+      = f.text_field :tag_list
+      %p= submit_tag "Update"
+      %ul[:id => "prevtags"]
+        = render :partial => Tag.find(:all)
+		

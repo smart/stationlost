@@ -9,6 +9,7 @@ set :repository, "git@github.com:smartocci/stationlost.git"
 set :branch, "master"
 set :user, "root"
 set :git_enable_submodules, 1
+set :deploy_via, :remote_cache
 #might not need this
 ssh_options[:forward_agent] = true
 

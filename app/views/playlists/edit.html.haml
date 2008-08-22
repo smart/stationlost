@@ -1,0 +1,5 @@
+%h1 Editing Playlist
+
+- form_for(:playlist, :url => object_url(current_object)) do |f|
+  = render :partial => "form", :locals => {:f => f}
+  %p= submit_tag "Update"

@@ -19,7 +19,7 @@ development:
   encoding: utf8
   database: stationlost_development
   username: root
-  password:
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -38,5 +38,5 @@ production:
   encoding: utf8
   database: stationlost_production
   username: root
-  password: 
+  password: rppt
   host: db_primary
