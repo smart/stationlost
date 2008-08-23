@@ -1,8 +1,9 @@
-class User < ActiveRecord::Base
+class <%= class_name %> < ActiveRecord::Base
  # This is not enabled you must add :password to identity to use password authentication
-  security_components :security_policy,
-   :trustification => [],
-   :identity       => [:password, :cookie_token, :simple_roles]
+ # security_components :security_policy,
+ #  :trustification => [],
+ #  :identity       => [:password, :cookie_token, :simple_roles]
+
   # Validation constants are in config/initializers/rest_auth_config.rb
   validates_presence_of     :identifier
   validates_length_of       :identifier,    :within => 3..40
