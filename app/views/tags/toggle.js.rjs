@@ -1,0 +1,7 @@
+if @object.send("has_#{params[:context].singularize}?".to_sym, params[:tag_name]) 
+  page["#{@object.class}_#{@context}_#{@tag_name}_tag"].add_class_name "active_tag"
+  page["#{@object.class}_#{@context}_#{@tag_name}_tag"].remove_class_name "inactive_tag"  
+else 
+  page["#{@object.class}_#{@context}_#{@tag_name}_tag"].remove_class_name "active_tag"
+  page["#{@object.class}_#{@context}_#{@tag_name}_tag"].add_class_name "inactive_tag"
+ end

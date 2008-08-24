@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.toggle_tag "/:object_name/:object_id/:context/:tag_name", :controller => "tags", :action => "toggle"
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'

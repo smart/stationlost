@@ -1,12 +1,8 @@
-
-%ul
-  %li#tag_notice
-    hello
-  %li
-    - remote_form_for(:clip, :url => object_url, :html => { :method => :put }) do |f| 
-      %label{:for => "clip_tags"} Tags:
-      = f.text_field :tag_list
-      %p= submit_tag "Update"
-      %ul[:id => "prevtags"]
-        = render :partial => Tag.find(:all)
-		
+%p Main Character
+= clip_box(current_object, "main_character", CHARACTERS, current_object.main_character_list)  
+%p Characters Who Appear
+= clip_box(current_object, "characters", CHARACTERS, current_object.character_list)
+%p Lore
+= clip_box(current_object, "lore", LORE, current_object.lore_list)
+%p Tags
+= clip_box(current_object, "tags", TAGS, current_object.tag_list)		

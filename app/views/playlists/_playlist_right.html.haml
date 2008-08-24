@@ -1,0 +1,14 @@
+%p Main Character
+= clip_box(current_object, "main_character", CHARACTERS, current_object.main_character_list, false)  
+%p Characters Who Appear
+= clip_box(current_object, "characters", CHARACTERS, current_object.character_list, false)
+%p Lore
+= clip_box(current_object, "lore", LORE, current_object.lore_list, false)
+%p Tags
+= clip_box(current_object, "tags", TAGS, current_object.tag_list, false)
+- if authorized?
+  = link_to 'Edit', edit_object_path
+  %div.admin
+    = link_to 'Destroy', object_path, :confirm => 'Really destroy clip?', :method => :delete
+    |
+    = link_to 'Back', objects_path

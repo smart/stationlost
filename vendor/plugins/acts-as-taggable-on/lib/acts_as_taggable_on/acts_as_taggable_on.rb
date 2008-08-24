@@ -54,6 +54,16 @@ module ActiveRecord
                 tag_list_on('#{tag_type}', owner)
               end
               
+              def has_#{tag_type.singularize}?(tt)
+                tag_list_on('#{tag_type}').include?(tt) ? true : false
+              end
+              
+              def #{tag_type}_toggle(tt)
+                tg =  tag_list_on('#{tag_type}')
+                tg.include?(tt) ? tg.delete(tt) : tg << tt
+                set_tag_list_on('#{tag_type}', tg)
+              end
+              
               def find_related_#{tag_type}(options = {})
                 related_tags_for('#{tag_type}', self.class, options)
               end

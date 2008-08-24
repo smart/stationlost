@@ -3,3 +3,9 @@
 - form_for(:playlist, :url => objects_url) do |f|
   = render :partial => "form", :locals => {:f => f}
   %p= submit_tag "Create"
+
+
+:erb  
+  <% content_for :sidebar do %> 
+    <%= render :partial => "clips/clip_right" %>
+  <% end %>

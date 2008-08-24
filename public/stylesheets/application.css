@@ -95,6 +95,8 @@ div#navigation {
       padding: 0 20px 0 20px;
       list-style-type: none; }
 
+
+
 div#header {
   position: relative;
   height: 118px; }
@@ -105,10 +107,10 @@ div#header {
     height: 63px;
     display: block;
     float: left;
-    position: relative;
+    position: relative; }
     /* background: url() no-repeat top left; } */
     div#header h1#branding strong {
-      position: absolute;
+      position: absolute;}
      /* left: -10000px; } */
   div#header #session {
     width: 288px;
@@ -132,8 +134,10 @@ div#header {
           display: inline;
           padding-right: 6px; }
 
+
 a {
   text-decoration: none; }
+
 
 .flash {
   background-color: #d3dde5;
@@ -178,6 +182,7 @@ form label {
   display: block;
   margin-bottom: .25em;
   font-weight: bold; }
+
 
 span.clear {
   clear: both;
@@ -245,6 +250,51 @@ span.clear {
 	width:   0px;
 }
 
+
+
 .jobs ul li {
 	list-style-type: none;
 }
+
+
+
+
+.tagbox ul {
+margin-top:9px;
+}
+
+.tagbox ul li {
+display:block;
+float:left;
+line-height:100%;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:3px 3px 0 0;
+padding:0;
+}
+
+.tagbox ul a {
+background-color:#FFFFCC;
+border-bottom:1px solid #DDDDAA;
+border-right:1px solid #DDDDAA;
+color:#333333;
+float:left;
+line-height:100%;
+padding:2px 3px;
+}
+
+.tagbox ul a:hover {
+color:#111111;
+}
+
+.tagbox ul li.active_tag a {
+background:#777777 none repeat scroll 0 0;
+color:#FFFFFF;
+}
+
+.tagbox ul li.active_tag a:hover {
+background-color:#CC0000;
+}
+
+

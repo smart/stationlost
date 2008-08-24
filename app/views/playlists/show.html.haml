@@ -10,24 +10,11 @@
     = image_tag "http://www.flowplayer.org/tools/img/3m.jpg"
     %div.play
 
-= content_for :sidebar do   
   <!-- root element of the playlist -->
   %div.playlist
     <!-- playlist items -->
     %div.items
-      = render :partial => "playlists/clip", :collection => current_object.clips
-    %div.navi
-
-   
-
-- if authorized?
-  
-  %div.admin
-    = link_to 'Edit', edit_object_path
-    |
-    = link_to 'Destroy', object_path, :confirm => 'Really destroy clip?', :method => :delete
-    |
-    = link_to 'Back', objects_path
+      = render :partial => "playlists/clip", :collection => current_object.clips   
 
 :erb 
   <% content_for :javascript do %>
@@ -36,6 +23,10 @@
     <%# javascript_include_tag 'jquery.scrollable.min' %>
     <%= javascript_include_tag 'flashembed.min' %>
   <% end %>
+
+- content_for :sidebar do 
+  = render :partial => "playlist_right"
+
 
 :erb
   <% content_for :head do %>

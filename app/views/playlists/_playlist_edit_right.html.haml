@@ -1,0 +1,24 @@
+%br{:clear => "all"}
+%br{:clear => "all"}
+%p Main Character
+= clip_box(current_object, "main_character", CHARACTERS, current_object.main_character_list, true)  
+%br{:clear => "all"}
+%br{:clear => "all"}
+%p Characters Who Appear
+= clip_box(current_object, "characters", CHARACTERS, current_object.character_list, true)
+%br{:clear => "all"}
+%br{:clear => "all"}
+%p Lore
+= clip_box(current_object, "lore", LORE, current_object.lore_list, true)
+%br{:clear => "all"}
+%br{:clear => "all"}
+%p Tags
+= clip_box(current_object, "tags", TAGS, current_object.tag_list, true)
+%br{:clear => "all"}
+%br{:clear => "all"}
+=link_to "Watch Playlist", object_path
+- if authorized?
+  %div.admin
+    = link_to 'Destroy', object_path, :confirm => 'Really destroy clip?', :method => :delete
+    |
+    = link_to 'Back', objects_path

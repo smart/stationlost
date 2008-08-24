@@ -11,7 +11,14 @@ class PlaylistsController < SiteController
     @current_objects ||= current_model.active
   end
 =end
+
+  def current_object
+    current_object = super
+    current_object.clips
+    current_object
+  end
+
   def context
-    action_name == 'index' ? 'application' : super
+    'application'
   end
 end
