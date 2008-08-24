@@ -4,6 +4,6 @@
 [submodule "vendor/plugins/attachment_fu"]
 	path = vendor/plugins/attachment_fu
 	url = git://github.com/technoweenie/attachment_fu.git
-[submodule "vendor/plugins/modulr-authentication"]
-	path = vendor/plugins/modulr-authentication
+[submodule "vendor/plugins/modulr_authentication"]
+	path = vendor/plugins/modulr_authentication
 	url = git://github.com/smartocci/modulr-authentication.git
